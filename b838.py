@@ -1,20 +1,19 @@
-R = 0
-L = 0
-t = int(input())
-for i in range(t):
-    n = input()
-    for i in n:
-        if R >= L:
-            if i == '(':
-                R += 1
-            else:
-                L += 1
-        else:
-            print("0")
-            break
-    if R == L:
-        print(R)
+for n in range(int(input())):
+  a = list(input().replace(" ",""))
+  i = 0
+  count = 0
+  while len(a):
+    if a[i] == "(" and a[i+1] == ")":
+      a.pop(i+1)
+      a.pop(i)
+      i = 0
+      count += 1
     else:
-        print(0)
-    R = 0
-    L = 0
+      i += 1
+
+    if len(a) == 0 :
+      print(count)
+      break
+    elif len(a) == 1 or i == len(a) - 1:
+      print(0)
+      break
