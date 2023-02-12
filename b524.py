@@ -1,4 +1,6 @@
 import array
+
+#最後一筆測資超時
 while True:
     try:
         line  = input()
