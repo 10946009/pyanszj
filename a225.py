@@ -1,10 +1,10 @@
-while 1:
+while True:
     try:
-        l = []
-        time = int(input())
-        num = input().split(" ")
-        for i in num:
-            i = "".join(reversed(i))
-        
+        num=int(input())
+        num_list=list(map(int,input().split()))
+        num_list.sort(key=lambda z:(z%10,-z))
+        print(*num_list)
+         
+         
     except:
         break
